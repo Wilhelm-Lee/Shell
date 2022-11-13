@@ -1,2 +1,3 @@
 # BashLearnings
-Combination of my personal Bash code tools, also as my bkup.
+
+### Chill, just my tools. Take if you need as well.
