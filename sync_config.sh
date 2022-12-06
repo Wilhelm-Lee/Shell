@@ -12,7 +12,7 @@ function ask()
   case $ans in
     [yY][eE][sS]|[yY])
       return true
-      break
+      break # ???
     ;;
     [nN][oO]|[nN])
       return false
@@ -32,12 +32,12 @@ function ask()
 if [[ "`whoami`" == "root" ]]; then
     echo -e "\e[35mInfo: You are currently run this script with identity of \"root\".
 Please aware inputting full path to target user, e.g. \"/home/johndoe\" is corrention restricted\e[37m.
-Press enter to proceed"
+Press ENTER to proceed"
     read
-else
-    echo -e "\e[35mInfo: Please aware inputting full path to target user \e[32m[[EXCEPT TO \"root\"]]\e[35m e.g. \"/home/johndoe\" is correction restricted\e[37m.
-Press enter to proceed"
-    read
+#else
+#    echo -e "\e[35mInfo: Please input target user name \e[32m[[EXCEPT TO \"root\"]]\e[35m e.g. \"johndoe\"\e[37m.
+#Press ENTER to proceed"
+#    read
 fi
 
 echo -e "\e[37mPlease input target user name(case sensitive)
@@ -93,7 +93,7 @@ fi
   if [[ $((`sudo cp -prf --remove-destination $THIS_CONFIG_PATH $THAT_CONFIG_PATH`)) == 0 ]]; then
       echo -e "\e[32mScript exited successfully\e[37m"
   else
-      echo -e "\e[31mScript exited with failure return code "$?
+      Echo -e "\e[31mScript exited with failure return code "$?
   fi
 #fi
 
