@@ -39,7 +39,7 @@ function dye()
     local style=$1
     local content=$2
     
-    printf "\e["$style"m"$content
+    printf "\e["$style"m""$content"
 
     # Resume
 .    printf "\e["$RESUME"m"
